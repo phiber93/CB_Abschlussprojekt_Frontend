@@ -1,0 +1,22 @@
+@if (isLoggedIn){
+<div class="container py-5 col-lg-10">
+    <h1 class="text-center pb-4">Monster Survivors</h1>
+    <div class="ratio ratio-16x9 p-5">
+        <iframe src="../../assets/game/monster-survivors.html" frameborder="0"></iframe>
+    </div>
+</div>
+} @else {
+<div class="container mx-auto py-5 ">
+    <div class="container">
+        <h1 class="text-center">Ready to fight?</h1>
+        <div class="card col-10 mx-auto text-center mt-5">
+            <div class="card-body">
+            <h3 class="card-title">You must be logged in to play</h3>
+            <a class="card-link" href="/register" routerLink="../register">Create an account now</a>
+            <h4 class="card-title h5 mt-5">Already have an account?</h4>
+            <a class="card-link" href="/login" routerLink="../login">Log in</a>
+        </div>
+        </div>
+    </div>
+</div>
+}

@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "Permanent Marker";
+    src: url(../src/assets/fonts/Permanent_Marker/PermanentMarker-Regular.ttf);
+}
+
+* {
+
+    font-family: 'Trebuchet MS', Arial, sans-serif
+
+}
+
+h1,
+h2 {
+    font-family: "Permanent Marker", Arial, sans-serif;
+}

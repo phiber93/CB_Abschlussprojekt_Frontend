@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Monster Survivors</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-auto">
+          <a href="/home" class="nav-link" routerLink="home">Home </a>
+        </li>
+        <li class="nav-item mx-auto">
+          <a href="/scoreboard" class="nav-link" routerLink="scoreboard">Scoreboard</a>
+        </li>
+        <li class="nav-item mx-auto">
+          <a href="/playgame" class="nav-link" routerLink="playgame">Play the game</a>
+        </li>
+        @if (showAdminBoard) {
+        <li class="nav-item mx-auto">
+          <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
+        </li>
+        }
+        @if (!isLoggedIn){
+        <li class="nav-item mx-auto">
+          <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+        </li>
+        <li class="nav-item mx-auto">
+          <a href="/login" class="nav-link" routerLink="login">Login</a>
+        </li>
+        } @else {
+        <li class="nav-item mx-auto">
+          <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+        </li>
+        <li class="nav-item mx-auto">
+          <a href class="nav-link" (click)="logout()">LogOut</a>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</nav>

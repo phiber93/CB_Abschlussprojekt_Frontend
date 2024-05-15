@@ -1,0 +1,13 @@
+<div class="container pt-5">
+    <h1 class="text-center">Email Verification</h1>
+
+    <div class="container mx-auto col-md-6 mt-5">
+
+        @if (!isSuccessful) {
+        <p class="text-center card-text">{{errorMessage}}</p>
+        } @else {
+        <p class="text-center">Verification successfull, you will be forwarded to the login page.</p>
+        }
+    </div>
+
+</div>
